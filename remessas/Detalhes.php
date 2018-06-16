@@ -6,56 +6,56 @@
 class Detalhes extends Funcoes
 {
     
-    private $identificacaoRegistro = 1;							//001 - 001 - 1 -  N CONSTANTE
-    private	$debito_automatico	=	false;
-    private $agenciaDebito	=	'00000';						//002 - 006 - 5 - N
-    private $digitoDebito	=	'0';							//007 - 007 - 1 - A
-    private $razaoContaCorrente	=	'00000';					//008 - 012 - 5 N
-    private $contaCorrente=	'0000000';							//013 - 019 - 7 - N
-    private $digitoContaCorrente=	'0';						//020 - 020 - 1 - A
+    private $identificacaoRegistro			=	1;		//001 - 001 - 1 -  N CONSTANTE
+    private $debito_automatico				=	false;
+    private $agenciaDebito				=	'00000';	//002 - 006 - 5 - N
+    private $digitoDebito				=	'0';		//007 - 007 - 1 - A
+    private $razaoContaCorrente				=	'00000';	//008 - 012 - 5 N
+    private $contaCorrente				=	'0000000';	//013 - 019 - 7 - N
+    private $digitoContaCorrente			=	'0';		//020 - 020 - 1 - A
     private $identificacaoEmpresaBenificiarioBanco;				//021 - 037 - 17 - A
-    private $numeroControleParticipante;						//038 - 062 - 25 - A
-    private $codigoBancoDebitoCompensacao;						//063 - 065 - 3 - N
-    private $campoMulta;										//066 - 066 - 1 - N
-    private $percentualMulta;									//067 - 070 - 4 - N
-    private $identificacaoTituloBanco;							//071 - 081 - 11 - N
+    private $numeroControleParticipante;					//038 - 062 - 25 - A
+    private $codigoBancoDebitoCompensacao;					//063 - 065 - 3 - N
+    private $campoMulta;							//066 - 066 - 1 - N
+    private $percentualMulta;							//067 - 070 - 4 - N
+    private $identificacaoTituloBanco;						//071 - 081 - 11 - N
     private $digitoAutoConsferenciaBancaria;					//082 - 082 - 1 - A
-    private $descontoBonificacaoDia	=	'0000000000';			//083 - 092 - 10 - N
-    private $condicaoEmissaoPapeletaCobranca = 2; 				//093 - 093 - 1 - CONSTANTE
-    private $identDebitoAutomatico = 'S';						//094 - 094 - 1 - A - CONSTANTE
-    //PREENCHER ESPAÇOS EM BRANCO								//095 - 104 - 10 - A
-    private $indicadorRateioCredito;							//105 - 105 - 1 - A
-    private $enderecamentoAvisoDebito = '0';					//106 - 106 - 1 - N - CONSTANTE
-    //PREENCHER ESPAÇOS EM BRANCO								//107 - 108 - 2 - A
-    private $identificacaoOcorrencia = '01';					//109 - 110 - 2 - N - CONSTANTE
-    private $numeroDocumento;									//111 - 120 - 10 - A
-    private $dataVencimentoTitulo;								//121 - 126 - 6 - N
-    private $valorTitulo;										//127 - 139 - 13 - N
-    private $bancoEncarregadoCobranca = "000";					//140 - 142 - 3 - N
-    private $agenciaDepositaria	=	'00000'; //143 - 147 - 5 - N
-    private $especieTitulo = '01'; //148 - 149 - 2 - N - CONSTRANTE
-    private $identificacao = "N";//150 - 150 - 1 - A
-    private $dataEmissaoTitulo;//151 - 156 - 6 - N
-    private $instrucao1 = '00';//157 -  158 - 2 - N
-    private $instrucao2 = '00'; //159 - 160 - 2 - N
-    private $valorCobradoDiaAtraso; //161 - 173 - 13 - N
-    private $dataLimiteDesconto; //174 - 179 - 6 - N
-    private $valorDesconto;//180 - 192 - 13 - N
-    private $valorIOF;//192 - 205 - 13 N
-    private $valorAbatimentoConcedidoCancelado;//206 - 218 - 13 - N
-    private $identificacaoTipoIncricaoPagador;//219 - 220 - 2 - N
-    private $numeroInscricaoPagador;//221 - 234 - 14 - N
-    private $nomePagador;//235 - 274 - 40 - A
-    private $enderecoPagador;//275 - 314 - 40 - A
-    private $primeiraMensagem;//315 - 326 - 12 - A
-    private $cep;//327 - 331 - 5 - N
-    private $sufixoCep;//332 - 334 - 3 - N
-    private $sacadorSegundaMensagem;//335 - 394 - 60 - A
-    private $numeroSequencialRegistro;//395 - 400 - 6 - N - AUTOINCREMENTADO E UNICO
+    private $descontoBonificacaoDia			=	'0000000000';	//083 - 092 - 10 - N
+    private $condicaoEmissaoPapeletaCobranca		=	2; 		//093 - 093 - 1 - CONSTANTE
+    private $identDebitoAutomatico 			=	'S';		//094 - 094 - 1 - A - CONSTANTE
+    //PREENCHER ESPAÇOS EM BRANCO						//095 - 104 - 10 - A
+    private $indicadorRateioCredito;						//105 - 105 - 1 - A
+    private $enderecamentoAvisoDebito 			=	'0';		//106 - 106 - 1 - N - CONSTANTE
+    //PREENCHER ESPAÇOS EM BRANCO						//107 - 108 - 2 - A
+    private $identificacaoOcorrencia 			=	'01';		//109 - 110 - 2 - N - CONSTANTE
+    private $numeroDocumento;							//111 - 120 - 10 - A
+    private $dataVencimentoTitulo;						//121 - 126 - 6 - N
+    private $valorTitulo;							//127 - 139 - 13 - N
+    private $bancoEncarregadoCobranca 			=	"000";		//140 - 142 - 3 - N
+    private $agenciaDepositaria				=	'00000'; 	//143 - 147 - 5 - N
+    private $especieTitulo				=	'01'; 		//148 - 149 - 2 - N - CONSTRANTE
+    private $identificacao				=	"N";		//150 - 150 - 1 - A
+    private $dataEmissaoTitulo;							//151 - 156 - 6 - N
+    private $instrucao1					=	'00';		//157 -  158 - 2 - N
+    private $instrucao2					=	'00'; 		//159 - 160 - 2 - N
+    private $valorCobradoDiaAtraso; 						//161 - 173 - 13 - N
+    private $dataLimiteDesconto; 						//174 - 179 - 6 - N
+    private $valorDesconto;							//180 - 192 - 13 - N
+    private $valorIOF;								//192 - 205 - 13 N
+    private $valorAbatimentoConcedidoCancelado;					//206 - 218 - 13 - N
+    private $identificacaoTipoIncricaoPagador;					//219 - 220 - 2 - N
+    private $numeroInscricaoPagador;						//221 - 234 - 14 - N
+    private $nomePagador;							//235 - 274 - 40 - A
+    private $enderecoPagador;							//275 - 314 - 40 - A
+    private $primeiraMensagem;							//315 - 326 - 12 - A
+    private $cep;								//327 - 331 - 5 - N
+    private $sufixoCep;								//332 - 334 - 3 - N
+    private $sacadorSegundaMensagem;						//335 - 394 - 60 - A
+    private $numeroSequencialRegistro;						//395 - 400 - 6 - N - AUTOINCREMENTADO E UNICO
 
     //EXTRA
-    private $carteira;
-	private $agenciaBeneficiario;	//25 a 29 - códigos da Agência Beneficiários, sem o dígito
+	private $carteira;
+	private $agenciaBeneficiario;						//25 a 29 - códigos da Agência Beneficiários, sem o dígito
 	private	$contaBeneficiario;
 	private $contaDigitoBeneficiario;
 	
@@ -64,32 +64,32 @@ class Detalhes extends Funcoes
 
 	private $rateio_tipoValorInformado			=	'1';
 
-	private $beneficiario_1_codigo_banco		=	"000";
+	private $beneficiario_1_codigo_banco			=	"000";
 	private $beneficiario_1_agencia				=	"00000";
-	private $beneficiario_1_agencia_digito 		=	"0";
-	private $beneficiario_1_cc					=	"000000000000";
+	private $beneficiario_1_agencia_digito 			=	"0";
+	private $beneficiario_1_cc				=	"000000000000";
 	private $beneficiario_1_cc_digito			=	"0";
-	private $beneficiario_1_valor_percent		=	"000000000000000";
+	private $beneficiario_1_valor_percent			=	"000000000000000";
 	private $beneficiario_1_nome				=	"                                        ";
 	private $beneficiario_1_parcela_id			=	"";
 	private $beneficiario_1_floating			=	"000";
 
-	private $beneficiario_2_codigo_banco		=	"000";
+	private $beneficiario_2_codigo_banco			=	"000";
 	private $beneficiario_2_agencia				=	"00000";
-	private $beneficiario_2_agencia_digito 		=	"0";
-	private $beneficiario_2_cc					=	"000000000000";
+	private $beneficiario_2_agencia_digito 			=	"0";
+	private $beneficiario_2_cc				=	"000000000000";
 	private $beneficiario_2_cc_digito			=	"0";
-	private $beneficiario_2_valor_percent		=	"000000000000000";
+	private $beneficiario_2_valor_percent			=	"000000000000000";
 	private $beneficiario_2_nome				=	"                                        ";
 	private $beneficiario_2_parcela_id			=	"";
 	private $beneficiario_2_floating			=	"000";
 
-	private $beneficiario_3_codigo_banco		=	"000";
+	private $beneficiario_3_codigo_banco			=	"000";
 	private $beneficiario_3_agencia				=	"00000";
-	private $beneficiario_3_agencia_digito 		=	"0";
+	private $beneficiario_3_agencia_digito 			=	"0";
 	private $beneficiario_3_cc					=	"000000000000";
 	private $beneficiario_3_cc_digito			=	"0";
-	private $beneficiario_3_valor_percent		=	"000000000000000";
+	private $beneficiario_3_valor_percent			=	"000000000000000";
 	private $beneficiario_3_nome				=	"                                        ";
 	private $beneficiario_3_parcela_id			=	"";
 	private $beneficiario_3_floating			=	"000";
@@ -1409,53 +1409,53 @@ public function getCarteira(){return $this->carteira;}
 	
     public function montaLinha($IdentificaRegistro = '1')
     {
-			if ($IdentificaRegistro == "1")
-			{
-         	$linha = $this->getIdentificacaoRegistro().				//001 a 001 Identificação do Registro
-            $this->getAgenciaDebito() .								//002 a 006 Agência de Débito (opcional) 
-            $this->getDigitoDebito() .								//007 a 007 Dígito da Agência de Débito (opcional) 001
-            $this->getRazaoContaCorrente() .						//008 a 012 Razão da Conta Corrente (opcional) 005
-            $this->getContaCorrente() .								//013 a 019 Conta Corrente (opcional) 007
-            $this->getDigitoContaCorrente() .						//020 a 020 Dígito da Conta Corrente (opcional) 001
-            $this->getIdentificacaoEmpresaBenificiarioBanco('0') . //021 a 037 Identificação da Empresa Beneficiária no Banco 017
+	if ($IdentificaRegistro == "1")
+	{
+            $linha = $this->getIdentificacaoRegistro().				//001 a 001 Identificação do Registro
+            $this->getAgenciaDebito() .						//002 a 006 Agência de Débito (opcional) 
+            $this->getDigitoDebito() .						//007 a 007 Dígito da Agência de Débito (opcional) 001
+            $this->getRazaoContaCorrente() .					//008 a 012 Razão da Conta Corrente (opcional) 005
+            $this->getContaCorrente() .						//013 a 019 Conta Corrente (opcional) 007
+            $this->getDigitoContaCorrente() .					//020 a 020 Dígito da Conta Corrente (opcional) 001
+            $this->getIdentificacaoEmpresaBenificiarioBanco('0') . 		//021 a 037 Identificação da Empresa Beneficiária no Banco 017
             $this->getNumeroControleParticipante() .				//038 a 062 Nº Controle do Participante		
             $this->getCodigoBancoDebitoCompensacao() .				//063 a 065 Código do Banco 
-            $this->getCampoMulta() .								//066 a 066 Campo de Multa
-            $this->getPercentualMulta() .							//067 a 070 Percentual de multa
-            $this->getIdentificacaoTituloBanco() .					//071 a 081 Identificação do Título no Banco
+            $this->getCampoMulta() .						//066 a 066 Campo de Multa
+            $this->getPercentualMulta() .					//067 a 070 Percentual de multa
+            $this->getIdentificacaoTituloBanco() .				//071 a 081 Identificação do Título no Banco
             $this->getDigitoAutoConsferenciaBancaria() .			//082 a 082 Digito de Auto Conferencia do Número 
-            $this->getDescontoBonificacaoDia() .					//083 a 092 Desconto Bonificação por dia
+            $this->getDescontoBonificacaoDia() .				//083 a 092 Desconto Bonificação por dia
             $this->getCondicaoEmissaoPapeletaCobranca() .			//093 a 093 Condição para Emissão da Papeleta de
-            $this->getIdentDebitoAutomatico() .						//094 a 094 Ident. se emite Boleto para Débito
-            $this->montarBranco('', 10) .							//095 a 104 Identificação da Operação do Banco 
-            $this->getIndicadorRateioCredito() .					//105 a 105 Indicador Rateio Crédito (opcional)
-            $this->getEnderecamentoAvisoDebito() .					//106 a 106 Endereçamento para Aviso do Débito 
-            $this->montarBranco('', 2) .							//107 a 108 Quantidade possíveis de pagamento 
-            $this->getIdentificacaoOcorrencia() .					//109 a 110 Identificação da ocorrência
-            $this->getNumeroDocumento() .							//111 a 120 Nº do Documento
-            $this->getDataVencimentoTitulo() .						//121 a 126 Data do Vencimento do Título
-            $this->getValorTitulo() .								//127 a 139 Valor do Título
-            $this->getBancoEncarregadoCobranca() .					//140 a 142 Banco Encarregado da Cobrança 
-            $this->getAgenciaDepositaria() .						//143 a 147 Agência Depositária
-            $this->getEspecieTitulo() .								//148 a 149 Espécie de Título 
-            $this->getIdentificacao() .								//150 a 150 Identificação
-            $this->getDataEmissaoTitulo() .							//151 a 156 Data da emissão do Título
-            $this->getInstrucao1() .								//157 a 158 1ª instrução
-            $this->getInstrucao2() .								//159 a 160 2ª instrução
-            $this->getValorCobradoDiaAtraso() .						//161 a 173 Valor a ser cobrado por Dia de Atraso
-            $this->getDataLimiteDesconto() .						//174 a 179 Data Limite P/Concessão de Desconto 006
-            $this->getValorDesconto() .								//180 a 192 Valor do Desconto 013 
-            $this->getValorIOF() .									//193 a 205 Valor do IOF 
+            $this->getIdentDebitoAutomatico() .					//094 a 094 Ident. se emite Boleto para Débito
+            $this->montarBranco('', 10) .					//095 a 104 Identificação da Operação do Banco 
+            $this->getIndicadorRateioCredito() .				//105 a 105 Indicador Rateio Crédito (opcional)
+            $this->getEnderecamentoAvisoDebito() .				//106 a 106 Endereçamento para Aviso do Débito 
+            $this->montarBranco('', 2) .					//107 a 108 Quantidade possíveis de pagamento 
+            $this->getIdentificacaoOcorrencia() .				//109 a 110 Identificação da ocorrência
+            $this->getNumeroDocumento() .					//111 a 120 Nº do Documento
+            $this->getDataVencimentoTitulo() .					//121 a 126 Data do Vencimento do Título
+            $this->getValorTitulo() .						//127 a 139 Valor do Título
+            $this->getBancoEncarregadoCobranca() .				//140 a 142 Banco Encarregado da Cobrança 
+            $this->getAgenciaDepositaria() .					//143 a 147 Agência Depositária
+            $this->getEspecieTitulo() .						//148 a 149 Espécie de Título 
+            $this->getIdentificacao() .						//150 a 150 Identificação
+            $this->getDataEmissaoTitulo() .					//151 a 156 Data da emissão do Título
+            $this->getInstrucao1() .						//157 a 158 1ª instrução
+            $this->getInstrucao2() .						//159 a 160 2ª instrução
+            $this->getValorCobradoDiaAtraso() .					//161 a 173 Valor a ser cobrado por Dia de Atraso
+            $this->getDataLimiteDesconto() .					//174 a 179 Data Limite P/Concessão de Desconto 006
+            $this->getValorDesconto() .						//180 a 192 Valor do Desconto 013 
+            $this->getValorIOF() .						//193 a 205 Valor do IOF 
             $this->getValorAbatimentoConcedidoCancelado() .			//206 a 218 Valor do Abatimento a ser concedido ou cancelado
             $this->getIdentificacaoTipoIncricaoPagador() .			//219 a 220 Identificação do Tipo de Inscrição do Pagador
-            $this->getNumeroInscricaoPagador() .					//221 a 234 Nº Inscrição do Pagador
-            $this->getNomePagador() .								//235 a 274 Nome do Pagador
-            $this->getEnderecoPagador() .							//275 a 314 Endereço Completo 
-            $this->getPrimeiraMensagem() .							//315 a 326 1ª Mensagem
-            $this->getCep() .										//327 a 331 CEP 
-            $this->getSufixoCep() .									//332 a 334 Sufixo do CEP
-            $this->getSacadorSegundaMensagem() .					//335 a 394 Sacador/Avalista ou 2ª Mensagem 
-            $this->getNumeroSequencialRegistro();					//395 a 400 Nº Seqüencial do Registro
+            $this->getNumeroInscricaoPagador() .				//221 a 234 Nº Inscrição do Pagador
+            $this->getNomePagador() .						//235 a 274 Nome do Pagador
+            $this->getEnderecoPagador() .					//275 a 314 Endereço Completo 
+            $this->getPrimeiraMensagem() .					//315 a 326 1ª Mensagem
+            $this->getCep() .							//327 a 331 CEP 
+            $this->getSufixoCep() .						//332 a 334 Sufixo do CEP
+            $this->getSacadorSegundaMensagem() .				//335 a 394 Sacador/Avalista ou 2ª Mensagem 
+            $this->getNumeroSequencialRegistro();				//395 a 400 Nº Seqüencial do Registro
 		}
 		else
 		if ($IdentificaRegistro == "3")
@@ -1463,46 +1463,46 @@ public function getCarteira(){return $this->carteira;}
 
 			$linha = $this->getIdentificacaoRegistro() .			//001 a 001 Identificação do Registro
 			$this->getIdentificacaoEmpresaBenificiarioBanco() .		//002 a 017 Identificação da Empresa no Banco
-			$this->getIdentificacaoTituloBanco().					//018 a 028 Identificação Título no Banco
+			$this->getIdentificacaoTituloBanco().				//018 a 028 Identificação Título no Banco
 			$this->getDigitoAutoConsferenciaBancaria() .			//029 a 029 Identificação Título no Banco
-			$this->getRateio_codigoParaCalculo().					//030 a 030 Código Para Cálculo do Rateio 001
-			$this->getRateio_tipoValorInformado().					//031 a 031 Tipo de Valor Informado 
-			$this->montarBranco('', 12).							//032 a 043 Filler
+			$this->getRateio_codigoParaCalculo().				//030 a 030 Código Para Cálculo do Rateio 001
+			$this->getRateio_tipoValorInformado().				//031 a 031 Tipo de Valor Informado 
+			$this->montarBranco('', 12).					//032 a 043 Filler
 
-			$this->getBeneficiario_1_codigo_banco().				//044 a 046 Código do Banco para Crédito do 1º Beneficiário
-			$this->getbeneficiario_1_agencia().						//047 a 051 Código da Agência para Crédito do 1º Beneficiário
-			$this->getbeneficiario_1_agencia_digito().				//052 a 052 Dígito da Agência para Crédito do 1º Beneficiário 
-			$this->getbeneficiario_1_cc().							//053 a 064 Número da Conta Corrente para Crédito do 1º Beneficiário
-			$this->getbeneficiario_1_cc_digito().					//065 a 065 Dígito da Conta Corrente para Crédito do 1º Beneficiário 
-			$this->getbeneficiario_1_valor_percent().				//066 a 080 Valor, ou Percentual para Rateio
-			$this->getbeneficiario_1_nome().						//081 a 120 Nome do 1º Beneficiário
-			$this->montarBranco('', 31).							//121 a 151 Filler
-			$this->getbeneficiario_1_parcela_id().					//152 a 157 Parcela id
-			$this->getbeneficiario_1_floating().					//158 a 160 Floating para o 1º Beneficiário 
+			$this->getBeneficiario_1_codigo_banco().			//044 a 046 Código do Banco para Crédito do 1º Beneficiário
+			$this->getbeneficiario_1_agencia().				//047 a 051 Código da Agência para Crédito do 1º Beneficiário
+			$this->getbeneficiario_1_agencia_digito().			//052 a 052 Dígito da Agência para Crédito do 1º Beneficiário 
+			$this->getbeneficiario_1_cc().					//053 a 064 Número da Conta Corrente para Crédito do 1º Beneficiário
+			$this->getbeneficiario_1_cc_digito().				//065 a 065 Dígito da Conta Corrente para Crédito do 1º Beneficiário 
+			$this->getbeneficiario_1_valor_percent().			//066 a 080 Valor, ou Percentual para Rateio
+			$this->getbeneficiario_1_nome().				//081 a 120 Nome do 1º Beneficiário
+			$this->montarBranco('', 31).					//121 a 151 Filler
+			$this->getbeneficiario_1_parcela_id().				//152 a 157 Parcela id
+			$this->getbeneficiario_1_floating().				//158 a 160 Floating para o 1º Beneficiário 
 				
-			$this->getbeneficiario_2_codigo_banco().				//161 a 163 Código do Banco para Credito do 2º Beneficiário
-			$this->getbeneficiario_2_agencia().						//164 a 168 Código da Agência para Crédito do 2º Beneficiário 
-			$this->getbeneficiario_2_agencia_digito().				//169 a 169 Dígito da Agência para Crédito do 2º Beneficiário 
-			$this->getbeneficiario_2_cc().							//170 a 181 Número da Conta Corrente para Crédito do 2º Beneficiário 
-			$this->getbeneficiario_2_cc_digito().					//182 a 182 Dígito da Conta Corrente para Crédito do 2º Beneficiário
-			$this->getbeneficiario_2_valor_percent().				//183 a 197 Valor, ou Percentual para Rateio 
-			$this->getbeneficiario_2_nome().						//198 a 237 Nome do 2º Beneficiário 
-			$this->montarBranco('', 31).							//238 a 268 Filler
-			$this->getbeneficiario_2_parcela_id().					//269 a 274 Parcela
-			$this->getbeneficiario_2_floating().					//275 a 277 Floating para o 2º Beneficiário
+			$this->getbeneficiario_2_codigo_banco().			//161 a 163 Código do Banco para Credito do 2º Beneficiário
+			$this->getbeneficiario_2_agencia().				//164 a 168 Código da Agência para Crédito do 2º Beneficiário 
+			$this->getbeneficiario_2_agencia_digito().			//169 a 169 Dígito da Agência para Crédito do 2º Beneficiário 
+			$this->getbeneficiario_2_cc().					//170 a 181 Número da Conta Corrente para Crédito do 2º Beneficiário 
+			$this->getbeneficiario_2_cc_digito().				//182 a 182 Dígito da Conta Corrente para Crédito do 2º Beneficiário
+			$this->getbeneficiario_2_valor_percent().			//183 a 197 Valor, ou Percentual para Rateio 
+			$this->getbeneficiario_2_nome().				//198 a 237 Nome do 2º Beneficiário 
+			$this->montarBranco('', 31).					//238 a 268 Filler
+			$this->getbeneficiario_2_parcela_id().				//269 a 274 Parcela
+			$this->getbeneficiario_2_floating().				//275 a 277 Floating para o 2º Beneficiário
 				
-			$this->getbeneficiario_3_codigo_banco().				//278 a 280 Código do Banco para Crédito do 3º Beneficiário 
-			$this->getbeneficiario_3_agencia().						//281 a 285 Código da Agência para Crédito do 3º Beneficiário
-			$this->getbeneficiario_3_agencia_digito().				//286 a 286 Dígito da Agência para Crédito do 3º Beneficiário 
-			$this->getbeneficiario_3_cc().							//287 a 298 Número da Conta Corrente para Crédito do 3º Beneficiário
-			$this->getbeneficiario_3_cc_digito().					//299 a 299 Dígito da Conta Corrente para Crédito do 3º Beneficiário
-			$this->getbeneficiario_3_valor_percent().				//300 a 314 Valor ou Percentual para Rateio 
-			$this->getbeneficiario_3_nome().						//315 a 354 Nome do 3º Beneficiário
-			$this->montarBranco('', 31).							//355 a 385 Filler
-			$this->getbeneficiario_3_parcela_id().					//386 a 391 Parcela 
-			$this->getbeneficiario_3_floating().					//392 a 394 Floating para 3º Beneficiário	
+			$this->getbeneficiario_3_codigo_banco().			//278 a 280 Código do Banco para Crédito do 3º Beneficiário 
+			$this->getbeneficiario_3_agencia().				//281 a 285 Código da Agência para Crédito do 3º Beneficiário
+			$this->getbeneficiario_3_agencia_digito().			//286 a 286 Dígito da Agência para Crédito do 3º Beneficiário 
+			$this->getbeneficiario_3_cc().					//287 a 298 Número da Conta Corrente para Crédito do 3º Beneficiário
+			$this->getbeneficiario_3_cc_digito().				//299 a 299 Dígito da Conta Corrente para Crédito do 3º Beneficiário
+			$this->getbeneficiario_3_valor_percent().			//300 a 314 Valor ou Percentual para Rateio 
+			$this->getbeneficiario_3_nome().				//315 a 354 Nome do 3º Beneficiário
+			$this->montarBranco('', 31).					//355 a 385 Filler
+			$this->getbeneficiario_3_parcela_id().				//386 a 391 Parcela 
+			$this->getbeneficiario_3_floating().				//392 a 394 Floating para 3º Beneficiário	
 				
-			$this->getNumeroSequencialRegistro();					//395 a 400 Número Seqüencial do Registro
+			$this->getNumeroSequencialRegistro();				//395 a 400 Número Seqüencial do Registro
 			//die($linha);
 		}
 			
