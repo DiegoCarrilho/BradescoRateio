@@ -13,51 +13,51 @@ class GeraBoleto
 	private $data_documento				=	"11/06/2018";
 	private $data_processamento			=	"11/06/2018";
 	private $valor_boleto				=	"220,00";
-	private $cpf						=	"04488021395";
-	private $sacado						=	"MARIA VERLANDIA TORRES ARAUJO";
-	private $endereco1					=	"JOAO ALMEIDA FILHO - 30";
-	private $endereco2					=	"ARARENDA-CE 662210-000";
+	private $cpf					=	"02266875388";
+	private $sacado					=	"PEDRO ALVARES CABRAL";
+	private $endereco1				=	"AVENIDA DUQUE DE CAXIAS - 30";
+	private $endereco2				=	"FORTALEZA-CE 60010-737";
 	private $instrucoes0				=	"<b>SR(A) CAIXA,</b>";
 	private $instrucoes1				=	"- Cobrar multa de R$ 2,00 e juros de R$ 0,83 ao dia após o vencimento.";
 	private $instrucoes2				=	"- Dar desconto de R$ 50,00 até o vencimento.";
 	private $instrucoes3				=	"Receber somente dinheiro no pagamento. Não receber 60 dias após o vencimento.";
-	private $instrucoes4				=	"MATRIC: 18080812. ANTONIO RAPHAEL MENDES RODRIGUES. CPF: 022.668.753-88. Mens JUN/18";
-	private $instrucoes5				=	"ARARENDA-CE - ENF [T02819] 2018-II.";
+	private $instrucoes4				=	"MATRIC: 18080812. PEDRO ALVARES CABRAL. CPF: 022.668.753-88. Mens JUN/18";
+	private $instrucoes5				=	"FORTALEZA-CE - ENF [T02819] 2018-II.";
 	private $instrucoes6				=	"SACADO: ANTONIO RAPHAEL MENDES RODRIGUES. CPF: 022.668.753-88.";
 	private $instrucoes7				=	"RUA ERIVALDO MOURAO FILHO, SN. CENTRO.";
-	private $instrucoes8				=	"LIVRAMENTO - CE. CEP: 62230-000. FONE: (88) 99422-5890";
-	private $quantidade					=	"001";
-	private $moeda						=	"9";
+	private $instrucoes8				=	"LIVRAMENTO - CE. CEP: 62230-000.";
+	private $quantidade				=	"001";
+	private $moeda					=	"9";
 	private $valor_unitario				=	"220,00";
-	private $aceite						=	"N";
-	private $especie					=	"R$";
+	private $aceite					=	"N";
+	private $especie				=	"R$";
 	private $especie_doc				=	"DS";
-	private $banco_id					=	"237";
-	private $codigo_banco_com_dv		=	"237-2";
-	private $agencia					=	"1234";
-	private $agencia_dv					=	"3";
+	private $banco_id				=	"237";
+	private $codigo_banco_com_dv			=	"237-2";
+	private $agencia				=	"1234";
+	private $agencia_dv				=	"3";
 	private $conta_cedente				=	"090733";
 	private $conta_cedente_dv			=	"2";
-	private $carteira					=	"09";
+	private $carteira				=	"09";
 	private $identificacao				=	"ICED";
-	private $cpf_cnpj					=	"12.716.813/000161";
-	private $endereco					=	"Avenida Duque de Caxias - 2125";
-	private $cidade_uf					=	"Fortaleza - Ceará";
-	private $cedente					=	"ICED - INSTITUTO CEARENSE DE EDUCAÇÃO";
-	private $digito_verificador_barra	=	"6";
+	private $cpf_cnpj				=	"12.716.813/0001-61";
+	private $endereco				=	"Avenida Duque de Caxias - 2125";
+	private $cidade_uf				=	"Fortaleza - Ceará";
+	private $cedente				=	"ICED - INSTITUTO CEARENSE DE EDUCAÇÃO";
+	private $digito_verificador_barra		=	"6";
 	private $codigo_barras				=	"23796760300000220001234090380000073300907330";
 	private $linha_digitavel			=	"23791.23405 90380.000076 33009.073306 6 76030000022000";
-	private $agencia_codigo_cedente		=	"1234-3 / 0090733-2";
-	private $nosso_numero_com_digito	=	"09/03800000733-1";
+	private $agencia_codigo_cedente			=	"1234-3 / 0090733-2";
+	private $nosso_numero_com_digito		=	"09/03800000733-1";
 	
 	public function get_nosso_numero()				{return $this->nosso_numero;}
-	public function get_numero_documento()			{return $this->numero_documento;}
-	public function get_data_vencimento()			{return $this->data_vencimento;}
-	public function get_fator_vencimento()			{return $this->fator_vencimento;}
-	public function get_data_documento()			{return $this->data_documento;}
-	public function get_data_processamento()		{return $this->data_processamento;}
+	public function get_numero_documento()				{return $this->numero_documento;}
+	public function get_data_vencimento()				{return $this->data_vencimento;}
+	public function get_fator_vencimento()				{return $this->fator_vencimento;}
+	public function get_data_documento()				{return $this->data_documento;}
+	public function get_data_processamento()			{return $this->data_processamento;}
 	public function get_valor_boleto()				{return $this->valor_boleto;}
-	public function get_cpf()						{return $this->cpf;}
+	public function get_cpf()					{return $this->cpf;}
 	public function get_sacado()					{return $this->sacado;}
 	public function get_endereco1()					{return $this->endereco1;}
 	public function get_endereco2()					{return $this->endereco2;}
@@ -71,28 +71,28 @@ class GeraBoleto
 	public function get_instrucoes7()				{return $this->instrucoes7;}
 	public function get_instrucoes8()				{return $this->instrucoes8;}
 	public function get_quantidade()				{return $this->quantidade;}
-	public function get_moeda()						{return $this->moeda;}
-	public function get_valor_unitario()			{return $this->valor_unitario;}
+	public function get_moeda()					{return $this->moeda;}
+	public function get_valor_unitario()				{return $this->valor_unitario;}
 	public function get_aceite()					{return $this->aceite;}
 	public function get_especie()					{return $this->especie;}
 	public function get_especie_doc()				{return $this->especie_doc;}
 	public function get_banco_id()					{return $this->banco_id;}
-	public function get_codigo_banco_com_dv()		{return $this->codigo_banco_com_dv;}
+	public function get_codigo_banco_com_dv()			{return $this->codigo_banco_com_dv;}
 	public function get_agencia()					{return $this->agencia;}
 	public function get_agencia_dv()				{return $this->agencia_dv;}
 	public function get_conta_cedente()				{return $this->conta_cedente;}
-	public function get_conta_cedente_dv()			{return $this->conta_cedente_dv;}
+	public function get_conta_cedente_dv()				{return $this->conta_cedente_dv;}
 	public function get_carteira()					{return $this->carteira;}
 	public function get_identificacao()				{return $this->identificacao;}
 	public function get_cpf_cnpj()					{return $this->cpf_cnpj;}
 	public function get_endereco()					{return $this->endereco;}
 	public function get_cidade_uf()					{return $this->cidade_uf;}
 	public function get_cedente()					{return $this->cedente;}
-	public function get_digito_verificador_barra()	{return $this->digito_verificador_barra;}
+	public function get_digito_verificador_barra()			{return $this->digito_verificador_barra;}
 	public function get_codigo_barras()				{return $this->codigo_barras;}
-	public function get_linha_digitavel()			{return $this->linha_digitavel;}
-	public function get_agencia_codigo_cedente()	{return $this->agencia_codigo_cedente;}
-	public function get_nosso_numero_com_digito()	{return $this->nosso_numero_com_digito;}
+	public function get_linha_digitavel()				{return $this->linha_digitavel;}
+	public function get_agencia_codigo_cedente()			{return $this->agencia_codigo_cedente;}
+	public function get_nosso_numero_com_digito()			{return $this->nosso_numero_com_digito;}
 
 
 
@@ -250,19 +250,19 @@ class GeraBoleto
 
 	public function monta_linha_digitavel($codigo) 
 	{
-			$p1 = substr($codigo, 0, 4);							// Numero do banco + Carteira
+			$p1 = substr($codigo, 0, 4);						// Numero do banco + Carteira
 			$p2 = substr($codigo, 19, 5);						// 5 primeiras posições do campo livre
-			$p3 = $this->modulo_10("$p1$p2");						// Digito do campo 1
-			$p4 = "$p1$p2$p3";								// União
+			$p3 = $this->modulo_10("$p1$p2");					// Digito do campo 1
+			$p4 = "$p1$p2$p3";							// União
 			$campo1 = substr($p4, 0, 5).'.'.substr($p4, 5);
 
 			$p1 = substr($codigo, 24, 10);						//Posições de 6 a 15 do campo livre
-			$p2 = $this->modulo_10($p1);								//Digito do campo 2	
+			$p2 = $this->modulo_10($p1);						//Digito do campo 2	
 			$p3 = "$p1$p2";
 			$campo2 = substr($p3, 0, 5).'.'.substr($p3, 5);
 
 			$p1 = substr($codigo, 34, 10);						//Posições de 16 a 25 do campo livre
-			$p2 = $this->modulo_10($p1);								//Digito do Campo 3
+			$p2 = $this->modulo_10($p1);						//Digito do Campo 3
 			$p3 = "$p1$p2";
 			$campo3 = substr($p3, 0, 5).'.'.substr($p3, 5);
 
@@ -311,9 +311,9 @@ class GeraBoleto
 
 
 		$barra = 	'<img src="imagens/p.png" width="1" height="50" border="0"><img '.
-					'src="imagens/b.png" width="1" height="50" border="0"><img  '.
-					'src="imagens/p.png" width="1" height="50" border="0"><img  '.
-					'src="imagens/b.png" width="1" height="50" border="0"><img  ';
+				'src="imagens/b.png" width="1" height="50" border="0"><img  '.
+				'src="imagens/p.png" width="1" height="50" border="0"><img  '.
+				'src="imagens/b.png" width="1" height="50" border="0"><img  ';
 
 
 		$texto = $valor ;
@@ -329,7 +329,7 @@ class GeraBoleto
 
 		  for($i=1;$i<11;$i+=2)
 			  $barra	.=	'src="imagens/p.png" width="'.((substr($f,($i-1),1) == "0")? $fino : $largo).'" height="50" border="0"><img '.
-							'src="imagens/b.png" width="'.((substr($f,$i,1) 	== "0")? $fino : $largo).'" height="50" border="0"><img ';
+						'src="imagens/b.png" width="'.((substr($f,$i,1) 	== "0")? $fino : $largo).'" height="50" border="0"><img ';
 
 		}
 
@@ -351,42 +351,42 @@ class GeraBoleto
 		$dadosboleto["data_documento"]				=$boleto->get_data_documento();
 		$dadosboleto["data_processamento"]			=$boleto->get_data_processamento();
 		$dadosboleto["valor_boleto"]				=$boleto->get_valor_boleto();
-		$dadosboleto["cpf"]							=$boleto->get_cpf();
-		$dadosboleto["sacado"]						=$boleto->get_sacado();
-		$dadosboleto["endereco1"]					=$boleto->get_endereco1();
-		$dadosboleto["endereco2"]					=$boleto->get_endereco2();
-		$dadosboleto["instrucoes0"]					=$boleto->get_instrucoes0();
-		$dadosboleto["instrucoes1"]					=$boleto->get_instrucoes1();
-		$dadosboleto["instrucoes2"]					=$boleto->get_instrucoes2();
-		$dadosboleto["instrucoes3"]					=$boleto->get_instrucoes3();
-		$dadosboleto["instrucoes4"]					=$boleto->get_instrucoes4();
-		$dadosboleto["instrucoes5"]					=$boleto->get_instrucoes5();
-		$dadosboleto["instrucoes6"]					=$boleto->get_instrucoes6();
-		$dadosboleto["instrucoes7"]					=$boleto->get_instrucoes7();
-		$dadosboleto["instrucoes8"]					=$boleto->get_instrucoes8();
-		$dadosboleto["quantidade"]					=$boleto->get_quantidade();
-		$dadosboleto["moeda"]						=$boleto->get_moeda();
+		$dadosboleto["cpf"]					=$boleto->get_cpf();
+		$dadosboleto["sacado"]					=$boleto->get_sacado();
+		$dadosboleto["endereco1"]				=$boleto->get_endereco1();
+		$dadosboleto["endereco2"]				=$boleto->get_endereco2();
+		$dadosboleto["instrucoes0"]				=$boleto->get_instrucoes0();
+		$dadosboleto["instrucoes1"]				=$boleto->get_instrucoes1();
+		$dadosboleto["instrucoes2"]				=$boleto->get_instrucoes2();
+		$dadosboleto["instrucoes3"]				=$boleto->get_instrucoes3();
+		$dadosboleto["instrucoes4"]				=$boleto->get_instrucoes4();
+		$dadosboleto["instrucoes5"]				=$boleto->get_instrucoes5();
+		$dadosboleto["instrucoes6"]				=$boleto->get_instrucoes6();
+		$dadosboleto["instrucoes7"]				=$boleto->get_instrucoes7();
+		$dadosboleto["instrucoes8"]				=$boleto->get_instrucoes8();
+		$dadosboleto["quantidade"]				=$boleto->get_quantidade();
+		$dadosboleto["moeda"]					=$boleto->get_moeda();
 		$dadosboleto["valor_unitario"]				=$boleto->get_valor_unitario();
-		$dadosboleto["aceite"]						=$boleto->get_aceite();
-		$dadosboleto["especie"]						=$boleto->get_especie();
-		$dadosboleto["especie_doc"]					=$boleto->get_especie_doc();
-		$dadosboleto["banco_id"]					=$boleto->get_banco_id();
+		$dadosboleto["aceite"]					=$boleto->get_aceite();
+		$dadosboleto["especie"]					=$boleto->get_especie();
+		$dadosboleto["especie_doc"]				=$boleto->get_especie_doc();
+		$dadosboleto["banco_id"]				=$boleto->get_banco_id();
 		$dadosboleto["codigo_banco_com_dv"]			=$boleto->get_codigo_banco_com_dv();
-		$dadosboleto["agencia"]						=$boleto->get_agencia();
-		$dadosboleto["agencia_dv"]					=$boleto->get_agencia_dv();
+		$dadosboleto["agencia"]					=$boleto->get_agencia();
+		$dadosboleto["agencia_dv"]				=$boleto->get_agencia_dv();
 		$dadosboleto["conta_cedente"]				=$boleto->get_conta_cedente();
 		$dadosboleto["conta_cedente_dv"]			=$boleto->get_conta_cedente_dv();
-		$dadosboleto["carteira"]					=$boleto->get_carteira();
+		$dadosboleto["carteira"]				=$boleto->get_carteira();
 		$dadosboleto["identificacao"]				=$boleto->get_identificacao();
-		$dadosboleto["cpf_cnpj"]					=$boleto->get_cpf_cnpj();
-		$dadosboleto["endereco"]					=$boleto->get_endereco();
-		$dadosboleto["cidade_uf"]					=$boleto->get_cidade_uf();
-		$dadosboleto["cedente"]						=$boleto->get_cedente();
-		$dadosboleto["digito_verificador_barra"]	=$boleto->get_digito_verificador_barra();
+		$dadosboleto["cpf_cnpj"]				=$boleto->get_cpf_cnpj();
+		$dadosboleto["endereco"]				=$boleto->get_endereco();
+		$dadosboleto["cidade_uf"]				=$boleto->get_cidade_uf();
+		$dadosboleto["cedente"]					=$boleto->get_cedente();
+		$dadosboleto["digito_verificador_barra"]		=$boleto->get_digito_verificador_barra();
 		$dadosboleto["codigo_barras"]				=$boleto->get_codigo_barras();
 		$dadosboleto["linha_digitavel"]				=$boleto->get_linha_digitavel();
-		$dadosboleto["agencia_codigo_cedente"]		=$boleto->get_agencia_codigo_cedente();		
-		$dadosboleto["nosso_numero_com_digito"]		=$boleto->get_nosso_numero_com_digito();
+		$dadosboleto["agencia_codigo_cedente"]			=$boleto->get_agencia_codigo_cedente();		
+		$dadosboleto["nosso_numero_com_digito"]			=$boleto->get_nosso_numero_com_digito();
 		
 	$pagina	=	'
 <HTML>
