@@ -6,7 +6,7 @@ Projetos Originais
 - Boleto:  https://boletophp.com.br/
 - Rateio:  Diego Carrilho
 
-Este projeto tem por objetivo, a implementação da função rateio de crédito na carteira de cobrança registrada do banco bradesco.
+Este projeto tem por objetivo, a implementação do rateio de crédito na carteira de cobrança registrada do banco bradesco.
 
 
 e-mail - diegocarrilho@hotmail.com
