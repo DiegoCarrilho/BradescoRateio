@@ -7,7 +7,7 @@ class Detalhes extends Funcoes
 {
     
     private $identificacaoRegistro = 1;							//001 - 001 - 1 -  N CONSTANTE
-	private	$debito_automatico	=	false;
+    private	$debito_automatico	=	false;
     private $agenciaDebito	=	'00000';						//002 - 006 - 5 - N
     private $digitoDebito	=	'0';							//007 - 007 - 1 - A
     private $razaoContaCorrente	=	'00000';					//008 - 012 - 5 N
@@ -273,7 +273,7 @@ class Detalhes extends Funcoes
     public function setbeneficiario_1_valor_percent($valor)
     {
 		
-			$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
+	$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
             if ($this->validaTamanhoCampo($valor, 15)) {
                 $this->beneficiario_1_valor_percent = $valor;
             } else 
@@ -282,7 +282,7 @@ class Detalhes extends Funcoes
 
     public function setbeneficiario_2_valor_percent($valor)
     {
- 			$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
+ 	$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
             if ($this->validaTamanhoCampo($valor, 15)) {
                 $this->beneficiario_2_valor_percent = $valor;
             } else 
@@ -292,7 +292,7 @@ class Detalhes extends Funcoes
     public function setbeneficiario_3_valor_percent($valor)
     {
 		
-			$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
+	$valor	=  (($valor == '') ? $this->montarBranco($valor, 15) : $this->addZeros($valor, 15));
             if ($this->validaTamanhoCampo($valor, 15)) {
                 $this->beneficiario_3_valor_percent = $valor;
             } else 
@@ -325,10 +325,10 @@ class Detalhes extends Funcoes
 	
     public function setbeneficiario_1_parcela_id($valor)
     {
-		$valor	=  (($valor == '') ? $this->montarBranco($valor, 6) : $this->addZeros($valor, 6));
-		if ($this->validaTamanhoCampo($valor, 6)) {
-			$this->beneficiario_1_parcela_id = $valor;
-		} else  throw new Exception('Error: Quantidade d ecaracteres do campo Conta Corrente Beneficiario invalidos.');
+	$valor	=  (($valor == '') ? $this->montarBranco($valor, 6) : $this->addZeros($valor, 6));
+	if ($this->validaTamanhoCampo($valor, 6)) {
+		$this->beneficiario_1_parcela_id = $valor;
+	} else  throw new Exception('Error: Quantidade d ecaracteres do campo Conta Corrente Beneficiario invalidos.');
     }
     public function setbeneficiario_2_parcela_id($valor)
     {
@@ -346,7 +346,6 @@ class Detalhes extends Funcoes
 		} else 
 			throw new Exception('Error: Quantidade d ecaracteres do campo Conta Corrente Beneficiario invalidos.');
     }
-	
 	
 	public function setbeneficiario_1_floating($valor)
     {
@@ -796,7 +795,7 @@ public function getCarteira(){return $this->carteira;}
      */
     public function setContaCorrente($conta_corrente)
     {
-        //verificando se � um numero
+        //verificando se é um numero
         if (is_numeric($conta_corrente)) {
             $conta_corrente = $this->addZeros($conta_corrente, 7);
 
