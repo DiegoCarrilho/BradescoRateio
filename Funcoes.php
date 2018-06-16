@@ -6,7 +6,7 @@
 abstract class Funcoes
 {
     /**
-     * metodo para montar uma string com espa�os em branco
+     * metodo para montar uma string com espaços em branco
      * @param unknown $string
      * @param unknown $tamanho
      * @param string $posicao
@@ -31,7 +31,7 @@ abstract class Funcoes
             for ($i = 0; $i < $qtd_zeros; $i++) 
                 $result .= ' ';
 
-            //verificando posi��o dos zeros
+            //verificando posição dos zeros
             if ($posicao == 'left') {
                 $result = $result . $string;
             } elseif ($posicao == 'right') 
@@ -39,7 +39,7 @@ abstract class Funcoes
 
             return $result;
         } else
-            throw new Exception('Error - tamanho da quantidade de espa�os n�o especificado.');
+            throw new Exception('Error - tamanho da quantidade de espaços não especificado.');
 
     }
 
@@ -63,7 +63,7 @@ abstract class Funcoes
             for ($i = 0; $i < $qtd_zeros; $i++) 
                 $result .= '0';
 			
-            //verificando posi��o dos zeros
+            //verificando posição dos zeros
             if ($posicao == 'left') {
                 $result = $result . $string;
             } elseif ($posicao == 'right')
@@ -75,23 +75,6 @@ abstract class Funcoes
 
     }
 
-    /**
-     * validando linha
-     * @param unknown $string
-     * @return string
-     
-    public function validaLinha($string)
-    {
-        $return = $this->removeAcentos($string);
-
-        if ($this->validaTamanhoCampo($return, 400)) {
-            //convertendo string para mai�scula
-            return strtoupper($this->removeAcentos($return));
-        } else
-			die($string);
-            throw new Exception('Erro - Informações de linha invalidas.'.strlen($string));
-    }
-*/
     /**
      * metodo para remover acentos
      * @param unknown $value
@@ -154,7 +137,7 @@ abstract class Funcoes
     }
 
     /**
-     * metodo para remover forma��o de moedas: pontos e virgulas
+     * metodo para remover formação de moedas: pontos e virgulas
      * @param unknown $valor
      * @return mixed|boolean
      */
@@ -177,7 +160,7 @@ abstract class Funcoes
     public function validaCPF($cpf = null)
     {
 
-        // Verifica se um n�mero foi informado
+        // Verifica se um número foi informado
         if (empty($cpf))
             return false;
 
@@ -185,7 +168,7 @@ abstract class Funcoes
         $cpf = preg_replace('[^0-9]', '', $cpf);
         $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
 
-        // Verifica se o numero de digitos informados � igual a 11
+        // Verifica se o numero de digitos informados é igual a 11
         if (strlen($cpf) != 11) {
             return false;
         // Verifica se nenhuma das sequências invalidas abaixo
@@ -204,7 +187,7 @@ abstract class Funcoes
         ) {
             return false;
             // Calcula os digitos verificadores para verificar se o
-            // CPF � v�lido
+            // CPF é válido
         } else {
 
             for ($t = 9; $t < 11; $t++) {
